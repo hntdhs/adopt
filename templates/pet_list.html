@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Meet the Pets</h1>
+
+<div class="row pets-listing">
+    
+    {% for pet in pets %}
+
+    <div class="col-3">
+        <img class="pet-image" src="{{ pet.image_url() }}">
+        <h2>{{ pet.name }}</h2>
+        {% if pet.available %}<b>This pet is available</b> {% endif %}
+    </div>
+    {% else %}
+    <div class="col-12">No pets available</div>
+
+    {% endfor %}
+
+</div>
+
+<a class="btn btn-primary" href="{{ url_for('add_pet') }}">Add a Pet</a>
+<!-- where is the url for add pet coming from? that's not the name of the form -->
+<!-- Answered in TA email response -->
+
+{% endblock %}
+
