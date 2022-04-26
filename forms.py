@@ -16,7 +16,7 @@ class AddPetForm(FlaskForm):
         choices=[("cat", "Cat"), ("dog", "Dog"), ("porcupine", "Porcupine")],
     )
 
-    photo_url = StringField(
+    image_url = StringField(
         "Photo URL",
         validators=[Optional(),  URL()],
     )
