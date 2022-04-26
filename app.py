@@ -42,7 +42,7 @@ def add_pet():
         db.session.add(new_pet)
         db.session.commit()
         flash(f"{new_pet.name} added.")
-        return redirect(url_for('pet_list'))
+        return redirect(url_for('list_all_pets'))
 
     else:
         # re-present form for editing
