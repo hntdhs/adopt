@@ -61,7 +61,7 @@ def edit_pet(pet_id):
     if form.validate_on_submit():
         pet.notes = form.notes.data
         pet.available = form.available.data
-        pet.photo_url = form.photo_url.data
+        pet.image_url = form.image_url.data
         db.session.commit()
         flash(f"{pet.name} updated")
         return redirect(url_for('list_pets'))

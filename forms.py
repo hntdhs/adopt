@@ -34,7 +34,7 @@ class AddPetForm(FlaskForm):
 class EditPetForm(FlaskForm):
     """Form for editing an existing pet"""
 
-    photo_url = StringField(
+    image_url = StringField(
         "Photo URL",
         validators=[Optional(), URL()],
         )
